@@ -13,14 +13,31 @@
         }
         
         body {
+            /* 渐变背景作为备用 */
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            /* 背景图片设置 */
             background-image: url('back.jfif');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             min-height: 100vh;
             overflow-x: hidden;
             padding: 10px;
             touch-action: manipulation;
+            position: relative;
+        }
+        
+        /* 添加半透明遮罩，提高文字可读性 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: -1;
         }
         
         .marquee-container {
@@ -89,6 +106,8 @@
         .center img {
             max-width: 100%;
             height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
         /* 添加点击效果样式优化 */
@@ -100,12 +119,25 @@
             user-select: none;
             font-size: 18px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            animation: floatUp 1.5s ease-out forwards;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-160px);
+                opacity: 0;
+            }
         }
         
         /* 针对小屏幕的进一步优化 */
         @media (max-width: 480px) {
             body {
                 padding: 5px;
+                background-attachment: scroll; /* 在移动设备上取消固定背景 */
             }
             
             .marquee-container {
@@ -130,6 +162,11 @@
             * {
                 -webkit-tap-highlight-color: transparent;
             }
+        }
+        
+        /* 背景图片加载失败时的备用样式 */
+        .no-background body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
         }
     </style>
 </head>
@@ -162,6 +199,24 @@
     <script type="text/javascript">
         let a_idx = 0;
         let ac = new (window.AudioContext || window.webkitAudioContext)();
+        
+        // 检测背景图片是否加载成功
+        function checkBackgroundImage() {
+            const img = new Image();
+            img.onload = function() {
+                console.log('背景图片加载成功');
+            };
+            img.onerror = function() {
+                console.log('背景图片加载失败，使用备用背景');
+                document.body.classList.add('no-background');
+            };
+            img.src = 'back.jfif';
+        }
+        
+        // 页面加载完成后检查背景图片
+        $(document).ready(function() {
+            checkBackgroundImage();
+        });
 
         $(function (){
             // 同时支持点击和触摸事件
@@ -184,12 +239,13 @@
                 $("body").append($i);
                 load_sound('ciallo.aac');
                 
-                $i.animate({
-                    "top": y - 180,
-                    "opacity": 0
-                }, 1500, function() {
+                // 使用CSS动画替代jQuery animate以获得更好性能
+                // 动画已经在CSS中定义
+                
+                // 动画结束后移除元素
+                setTimeout(function() {
                     $i.remove();
-                });
+                }, 1500);
                 
                 // 阻止触摸事件的默认行为（如滚动）
                 if(e.type === 'touchstart') {
@@ -241,6 +297,12 @@
                 event.preventDefault();
             }
         }, false);
+        
+        // 窗口大小变化时重新调整背景
+        window.addEventListener('resize', function() {
+            // 确保背景图片始终覆盖整个视口
+            document.body.style.backgroundSize = 'cover';
+        });
     </script>
 </body>
 </html>
