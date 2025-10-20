@@ -1,103 +1,222 @@
-
-<!-- saved from url=(0104)file:///C:/Users/CTT/Desktop/ciallo/Ciallo%EF%BD%9E(%E2%88%A0%E3%83%BB%CF%89_%20)%E2%8C%92%E2%98%85.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <title>Ciallo～(∠・ω&lt; )⌒★</title>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciallo～(∠・ω< )⌒★</title>
     <link rel="shortcut icon" href="./favicon.ico">
-<style>
-    .center {
-        width: 540px;
-        height: 120px;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-</style></head>
-
-<body style="background-image: url(&#39;back.jfif&#39;); background-repeat: no-repeat;background-size: cover;  ">
-    <div>
-        <marquee behavior="scroll" direction="left" scrollamount="30"><font color="red" size="15px">Ciallo～(∠・ω&lt; )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="15"><font color="aqua" size="11px">Ciallo～(∠・ω&lt; )⌒☆</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="25"><font>Ciallo～(∠・ω&lt; )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="12"><font color="coral" size="10px">Ciallo～(∠・ω&lt; )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="28"><font color="red">Ciallo～(∠・ω&lt; )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="20"><font color="greenyellow" size="13px">Ciallo～(∠・ω&lt; )⌒☆</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="10"><font size="16px">Ciallo～(∠・ω&lt; )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="15"><font color="pink" size="20px">Ciallo～(∠・ω&lt; )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="11"><font color="aqua" size="6px">Ciallo～(∠・ω&lt; )⌒☆</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="28"><font color="red">Ciallo～(∠・ω&lt; )⌒☆</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="8"><font color="greenyellow" size="10px">Ciallo～(∠・ω&lt; )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="20"><font color="pink" size="9px">Ciallo～(∠・ω&lt; )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="13"><font color="green" size="5px">Ciallo～(∠・ω&lt; )⌒☆</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="17"><font color="blue" size="5px">Ciallo～(∠・ω&lt; )⌒☆</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="16"><font color="yellow" size="7px">Ciallo～(∠・ω&lt; )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="11"><font color="red" size="5px">Ciallo～(∠・ω&lt; )⌒★</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="10"><font color="orange" size="8px">Ciallo～(∠・ω&lt; )⌒☆</font></marquee>
-        <marquee behavior="scroll" direction="left" scrollamount="20"><font color="gray" size="9px">Ciallo～(∠・ω&lt; )⌒★</font></marquee>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url('back.jfif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 10px;
+        }
+        
+        .marquee-container {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+        
+        marquee {
+            margin: 5px 0;
+            display: block;
+        }
+        
+        /* 手机端字体大小调整 */
+        @media (max-width: 768px) {
+            marquee {
+                font-size: 14px !important;
+            }
+            
+            marquee[size="20px"] { font-size: 16px !important; }
+            marquee[size="16px"] { font-size: 14px !important; }
+            marquee[size="15px"] { font-size: 14px !important; }
+            marquee[size="13px"] { font-size: 12px !important; }
+            marquee[size="11px"] { font-size: 11px !important; }
+            marquee[size="10px"] { font-size: 10px !important; }
+            marquee[size="9px"] { font-size: 9px !important; }
+            marquee[size="8px"] { font-size: 8px !important; }
+            marquee[size="7px"] { font-size: 7px !important; }
+            marquee[size="6px"] { font-size: 6px !important; }
+            marquee[size="5px"] { font-size: 5px !important; }
+        }
+        
+        /* 手机端滚动速度调整 */
+        @media (max-width: 768px) {
+            marquee[scrollamount="30"] { scrollamount: 15; }
+            marquee[scrollamount="28"] { scrollamount: 14; }
+            marquee[scrollamount="25"] { scrollamount: 13; }
+            marquee[scrollamount="20"] { scrollamount: 10; }
+            marquee[scrollamount="17"] { scrollamount: 9; }
+            marquee[scrollamount="16"] { scrollamount: 8; }
+            marquee[scrollamount="15"] { scrollamount: 8; }
+            marquee[scrollamount="13"] { scrollamount: 7; }
+            marquee[scrollamount="12"] { scrollamount: 6; }
+            marquee[scrollamount="11"] { scrollamount: 6; }
+            marquee[scrollamount="10"] { scrollamount: 5; }
+            marquee[scrollamount="8"] { scrollamount: 4; }
+        }
+        
+        .center {
+            width: 100%;
+            max-width: 540px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .center img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* 添加点击效果样式优化 */
+        .click-effect {
+            z-index: 9999;
+            position: absolute;
+            font-weight: bold;
+            pointer-events: none;
+            user-select: none;
+        }
+        
+        /* 针对小屏幕的进一步优化 */
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            
+            .marquee-container {
+                margin-bottom: 10px;
+            }
+            
+            marquee {
+                margin: 3px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <marquee behavior="scroll" direction="left" scrollamount="30"><font color="red" size="15px">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="15"><font color="aqua" size="11px">Ciallo～(∠・ω< )⌒☆</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="25"><font>Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="12"><font color="coral" size="10px">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="28"><font color="red">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="20"><font color="greenyellow" size="13px">Ciallo～(∠・ω< )⌒☆</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="10"><font size="16px">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="15"><font color="pink" size="20px">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="11"><font color="aqua" size="6px">Ciallo～(∠・ω< )⌒☆</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="28"><font color="red">Ciallo～(∠・ω< )⌒☆</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="8"><font color="greenyellow" size="10px">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="20"><font color="pink" size="9px">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="13"><font color="green" size="5px">Ciallo～(∠・ω< )⌒☆</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="17"><font color="blue" size="5px">Ciallo～(∠・ω< )⌒☆</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="16"><font color="yellow" size="7px">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="11"><font color="red" size="5px">Ciallo～(∠・ω< )⌒★</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="10"><font color="orange" size="8px">Ciallo～(∠・ω< )⌒☆</font></marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="20"><font color="gray" size="9px">Ciallo～(∠・ω< )⌒★</font></marquee>
     </div>
     <div id="main" class="center">
-        <img src="./ciallo.gif">
+        <img src="./ciallo.gif" alt="Ciallo动画">
     </div>
 
+    <script src="./jquery.min.js"></script>
+    <script type="text/javascript">
+        let a_idx = 0;
+        let ac = new (window.AudioContext || window.webkitAudioContext)();
 
-<script src="./Ciallo～(∠・ω_ )⌒★_files/jquery.min.js"></script>
-<script type="text/javascript">
-    let a_idx = 0;
-
-    let ac = new AudioContext();
-
-    $(function (){
-        $("body").click(function(e) {
-            const a = new Array("Ciallo～(∠・ω< )⌒★", "Ciallo～(∠・ω< )⌒☆");
-            const $i = $("<span/>").text(a[a_idx]);
-            a_idx = (a_idx + 1) % a.length;
-            const x = e.pageX,
-                y = e.pageY;
-            $i.css({
-                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
-                "top": y - 20,
-                "left": x,
-                "position": "absolute",
-                "font-weight": "bold",
-                "color": color16()
-            });
-            $("body").append($i);
-            load_sound('ciallo.aac');
-            $i.animate({
+        $(function (){
+            $("body").on("click touchstart", function(e) {
+                // 处理触摸事件
+                const touch = e.originalEvent.touches ? e.originalEvent.touches[0] : e;
+                const x = touch.pageX,
+                      y = touch.pageY;
+                
+                const a = new Array("Ciallo～(∠・ω< )⌒★", "Ciallo～(∠・ω< )⌒☆");
+                const $i = $("<span class='click-effect'></span>").text(a[a_idx]);
+                a_idx = (a_idx + 1) % a.length;
+                
+                $i.css({
+                    "top": y - 20,
+                    "left": x,
+                    "color": color16(),
+                    "font-size": getClickFontSize()
+                });
+                
+                $("body").append($i);
+                load_sound('ciallo.aac');
+                
+                $i.animate({
                     "top": y - 180,
                     "opacity": 0
-                },
-                1500,
-                function() {
+                }, 1500, function() {
                     $i.remove();
                 });
-        });
-    })
-
-    function color16(){
-        const r = Math.floor(Math.random()*256);
-        const g = Math.floor(Math.random()*256);
-        const b = Math.floor(Math.random()*256);
-        return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
-    }
-
-    function load_sound(url_data) {
-        const req = new XMLHttpRequest();
-        req.open('GET', url_data, true);
-        req.responseType = 'arraybuffer';
-        req.onload = function() {
-            ac.decodeAudioData(req.response, function(buffer){
-                const source = ac.createBufferSource();
-                source.buffer = buffer;
-                source.connect(ac.destination);
-                source.start(0);
-            },function (e) {
-                console.info('错误');
+                
+                // 阻止触摸事件的默认行为（如滚动）
+                if(e.type === 'touchstart') {
+                    e.preventDefault();
+                }
             });
+        });
+
+        function color16(){
+            const r = Math.floor(Math.random()*256);
+            const g = Math.floor(Math.random()*256);
+            const b = Math.floor(Math.random()*256);
+            return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
         }
-        req.send();
-    }
-</script></body></html>
+
+        function getClickFontSize() {
+            // 根据屏幕宽度调整点击出现的字体大小
+            const width = window.innerWidth;
+            if(width < 480) return "14px";
+            if(width < 768) return "16px";
+            return "18px";
+        }
+
+        function load_sound(url_data) {
+            const req = new XMLHttpRequest();
+            req.open('GET', url_data, true);
+            req.responseType = 'arraybuffer';
+            req.onload = function() {
+                ac.decodeAudioData(req.response, function(buffer){
+                    const source = ac.createBufferSource();
+                    source.buffer = buffer;
+                    source.connect(ac.destination);
+                    source.start(0);
+                },function (e) {
+                    console.info('音频解码错误:', e);
+                });
+            }
+            req.onerror = function() {
+                console.info('音频加载失败');
+            }
+            req.send();
+        }
+        
+        // 防止在移动端双击缩放
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    </script>
+</body>
+</html>
